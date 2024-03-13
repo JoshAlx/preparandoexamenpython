@@ -35,7 +35,7 @@ while(opcion != 6):
         for bandaAuxiliar in bandas:
             if(bandaAuxiliar["nombre"] == bandaBuscada):
                 # Como lo encontré, muestro los datos de bandAuxiliar
-                print(f"id: {bandaAuxiliar["id"]} --- nombre: {bandaAuxiliar["nombre"]} ")
+                print(f"id: {bandaAuxiliar['id']} --- nombre: {bandaAuxiliar['nombre']} ")
                 bandaEncontrada = True
                 break
         
@@ -60,39 +60,39 @@ while(opcion != 6):
 
     elif(opcion == 4):
         
-        nombre_banda_modificar = input("Digite el nombre de la banda que desea modificar: ")
-        banda_modificar = None
+        nombreBandaModificar = input("Digite el nombre de la banda que desea modificar: ")
+        bandaModificar = None
         for banda in bandas:
-            if banda["nombre"] == nombre_banda_modificar:
-                banda_modificar = banda
+            if banda["nombre"] == nombreBandaModificar:
+                bandaModificar = banda
                 break
     
-        if banda_modificar:
-            # Mostrar los datos actuales de la banda
+        if bandaModificar:
+            # Muestra los datos actuales de la banda seleccionada
             print("Datos actuales de la banda:")
-            print(banda_modificar)
+            print(bandaModificar)
 
-            # Solicitar los nuevos datos
-            banda_modificar["nombre"] = input("Nuevo nombre de la banda: ")
-            banda_modificar["genero"] = input("Nuevo género: ")
-            banda_modificar["clasificación"] = input("Nueva clasificación: ")
-            banda_modificar["tiempo"] = int(input("Nuevo tiempo: "))
-            banda_modificar["costo"] = int(input("Nuevo costo: ($)"))
+            # Solicita los nuevos datos de la banda
+            bandaModificar["nombre"] = input("Nuevo nombre de la banda: ")
+            bandaModificar["genero"] = input("Nuevo género: ")
+            bandaModificar["clasificación"] = input("Nueva clasificación: ")
+            bandaModificar["tiempo"] = int(input("Nuevo tiempo: "))
+            bandaModificar["costo"] = int(input("Nuevo costo: ($)"))
         else:
             print("La banda no se encontró en la lista.")
     
     elif(opcion == 5):
         
-        nombre_banda_eliminar = input("Digite el nombre de la banda que desea eliminar: ")
-        banda_eliminar = None
+        nombreBandaEliminar = input("Digite el nombre de la banda que desea eliminar: ")
+        bandaEliminar = None
         for banda in bandas:
-            if banda["nombre"] == nombre_banda_eliminar:
-                banda_eliminar = banda
+            if banda["nombre"] == nombreBandaEliminar:
+                bandaEliminar = banda
                 break
     
-        if banda_eliminar:
-            bandas.remove(banda_eliminar)
-            print(f"La banda '{nombre_banda_eliminar}' ha sido eliminada correctamente.")
+        if bandaEliminar:
+            bandas.remove(bandaEliminar)
+            print(f"La banda '{nombreBandaEliminar}' ha sido eliminada correctamente.")
         else:
             print("La banda no se encontró en la lista.")
     
