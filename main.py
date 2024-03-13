@@ -17,7 +17,7 @@ while(opcion != 5):
     opcion = int(input("Digita una opción: "))
 
     if(opcion == 1):
-        
+
         banda = {}
         # creando los datos del diccionario
         banda["id"]=int(input("Digita el id: "))
@@ -36,7 +36,7 @@ while(opcion != 5):
                 # Como lo encontré, muestro los datos de bandAuxiliar
                 print(f"id: {bandaAuxiliar["id"]} --- nombre: {bandaAuxiliar["nombre"]} ")
             else:
-                print("Parce, siga buscando...")
+                print("Parce, siga buscando... oeoeoeoe")
 
     elif(opcion == 3):
 
