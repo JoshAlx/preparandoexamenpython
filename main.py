@@ -40,7 +40,7 @@ while(opcion != 6):
                 break
         
         if not bandaEncontrada:
-            print("Parce, siga buscando...")
+            print("Banda no encontrada.")
 
     elif(opcion == 3):
 
